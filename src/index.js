@@ -48,7 +48,10 @@ module.exports = async function install (options) {
 }
 
 function getConfig ({ version, platform, arch, installPath }) {
-  const conf = pkgConf.sync('go-filecoin', { cwd: Path.join(process.cwd(), '..') })
+  let conf = {}
+  try {
+    conf = pkgConf.sync('go-filecoin', { cwd: Path.join(process.cwd(), '..') })
+  } catch (_) {}
 
   return {
     version: process.env.GO_FILECOIN_DEP_VERSION || version || conf.version || '*',
