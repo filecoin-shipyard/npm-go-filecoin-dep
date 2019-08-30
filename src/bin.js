@@ -13,6 +13,6 @@ install({
   console.log(`Installed go-filecoin to ${installPath}\n`)
   process.exit(0)
 }, err => {
-  console.log('Download failed!', err)
+  console.error(err)
   process.exit(1)
 })

@@ -23,14 +23,14 @@ module.exports = async function install (options) {
     throw new Error(`Platform '${config.platform}' unavailable`)
   }
 
-  console.log(`Checking available versions for ${config.repoUrl}`)
+  console.log(`Checking for available versions: ${config.repoUrl}`)
 
-  const tags = Object.keys(await remoteGitTags(config.repoUrl))
-    .filter(tag => Semver.valid(tag))
+  const tags = await remoteGitTags(config.repoUrl)
+  const versions = Array.from(tags.keys()).filter(tag => Semver.valid(tag))
 
-  console.log(`Found the following available versions: ${tags}`)
+  console.log(`Found the following available versions: ${versions}`)
 
-  const version = getLatestStable(getVersionsInRange(config.version, tags))
+  const version = getLatestStable(getVersionsInRange(config.version, versions))
 
   if (!version) {
     throw new Error(`No version satisfying '${config.version}' available`)
@@ -48,10 +48,7 @@ module.exports = async function install (options) {
 }
 
 function getConfig ({ version, platform, arch, installPath }) {
-  let conf = {}
-  try {
-    conf = pkgConf.sync('go-filecoin', { cwd: Path.join(process.cwd(), '..') })
-  } catch (_) {}
+  const conf = pkgConf.sync('go-filecoin', { cwd: Path.join(process.cwd(), '..') })
 
   return {
     version: process.env.GO_FILECOIN_DEP_VERSION || version || conf.version || '*',
