@@ -1,3 +1,13 @@
+<a name="0.0.4"></a>
+## [0.0.4](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.3...v0.0.4) (2019-08-30)
+
+
+### Bug Fixes
+
+* missing package.json ([97fa1d2](https://github.com/alanshaw/npm-go-filecoin-dep/commit/97fa1d2))
+
+
+
 <a name="0.0.3"></a>
 ## [0.0.3](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.2...v0.0.3) (2019-08-30)
 
