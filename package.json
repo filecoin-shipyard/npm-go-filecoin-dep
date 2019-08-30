@@ -1,6 +1,6 @@
 {
   "name": "go-filecoin-dep",
-  "version": "0.0.7",
+  "version": "0.0.8",
   "description": "Install the latest go-filecoin binary",
   "main": "src/index.js",
   "engines": {
