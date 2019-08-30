@@ -9,8 +9,11 @@
   },
   "scripts": {
     "install": "node src/bin.js",
-    "test": "aegir test --type node",
-    "lint": "aegir lint"
+    "test": "aegir test -t node",
+    "lint": "aegir lint",
+    "release": "aegir release --no-docs --no-build --no-test",
+    "release:minor": "aegir release --type minor --no-docs --no-build --no-test",
+    "release:major": "aegir release --type major --no-docs --no-build --no-test"
   },
   "repository": {
     "type": "git",
