@@ -9,8 +9,7 @@ install({
   platform: process.argv[3],
   arch: process.argv[4]
 }).then(({ version, platform, arch, fileName, installPath }) => {
-  console.log(`Downloaded ${fileName}\n`)
-  console.log(`Installed go-filecoin to ${installPath}\n`)
+  console.log(`Installed go-filecoin to ${installPath}`)
   process.exit(0)
 }, err => {
   console.error(err)
