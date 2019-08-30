@@ -1,3 +1,13 @@
+<a name="0.0.7"></a>
+## [0.0.7](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.6...v0.0.7) (2019-08-30)
+
+
+### Bug Fixes
+
+* platform name and filter 9.9.999 tag ([d52c222](https://github.com/alanshaw/npm-go-filecoin-dep/commit/d52c222))
+
+
+
 <a name="0.0.6"></a>
 ## [0.0.6](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.5...v0.0.6) (2019-08-30)
 
