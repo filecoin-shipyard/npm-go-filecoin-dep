@@ -26,7 +26,9 @@ module.exports = async function install (options) {
   console.log(`Checking for available versions: ${config.repoUrl}`)
 
   const tags = await remoteGitTags(config.repoUrl)
-  const versions = Array.from(tags.keys()).filter(tag => Semver.valid(tag))
+  const versions = Array.from(tags.keys())
+    .map(tag => Semver.valid(tag))
+    .filter(Boolean)
 
   console.log(`Found the following available versions: ${versions}`)
 
@@ -62,7 +64,7 @@ function getConfig ({ version, platform, arch, installPath }) {
 function getLatestStable (versions) {
   const stables = versions.filter(v => !UnstablePattern.test(v || ''))
   return stables.length
-    ? stables.reduce((latest, v) => Semver.gt(v, latest) ? v : latest, '0')
+    ? stables.reduce((latest, v) => Semver.gt(v, latest) ? v : latest, '0.0.0')
     : null
 }
 
