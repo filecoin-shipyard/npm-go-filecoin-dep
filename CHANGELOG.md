@@ -1,3 +1,13 @@
+<a name="0.0.8"></a>
+## [0.0.8](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.7...v0.0.8) (2019-08-30)
+
+
+### Bug Fixes
+
+* remove unnecessary logging ([1c2e002](https://github.com/alanshaw/npm-go-filecoin-dep/commit/1c2e002))
+
+
+
 <a name="0.0.7"></a>
 ## [0.0.7](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.6...v0.0.7) (2019-08-30)
 
