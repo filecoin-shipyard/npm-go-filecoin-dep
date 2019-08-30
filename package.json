@@ -1,6 +1,6 @@
 {
   "name": "go-filecoin-dep",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Install the latest go-filecoin binary",
   "main": "src/index.js",
   "engines": {
@@ -42,5 +42,8 @@
   "homepage": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep",
   "devDependencies": {
     "aegir": "^18.2.0"
-  }
+  },
+  "contributors": [
+    "Alan Shaw <alan.shaw@protocol.ai>"
+  ]
 }
