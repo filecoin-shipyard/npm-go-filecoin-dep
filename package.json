@@ -4,8 +4,8 @@
   "description": "Install the latest go-filecoin binary",
   "main": "src/index.js",
   "engines": {
-    "node": ">=6.0.0",
-    "npm": ">=3.0.0"
+    "node": ">=10.0.0",
+    "npm": ">=6.0.0"
   },
   "scripts": {
     "install": "node src/bin.js",
