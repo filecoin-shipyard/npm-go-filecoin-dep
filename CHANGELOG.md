@@ -1,3 +1,13 @@
+<a name="0.0.6"></a>
+## [0.0.6](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.5...v0.0.6) (2019-08-30)
+
+
+### Bug Fixes
+
+* use parsed version ([ae5fe98](https://github.com/alanshaw/npm-go-filecoin-dep/commit/ae5fe98))
+
+
+
 <a name="0.0.5"></a>
 ## [0.0.5](https://github.com/alanshaw/npm-go-filecoin-dep/compare/v0.0.4...v0.0.5) (2019-08-30)
 
