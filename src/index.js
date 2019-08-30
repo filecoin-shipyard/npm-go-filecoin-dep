@@ -28,9 +28,10 @@ module.exports = async function install (options) {
   const tags = await remoteGitTags(config.repoUrl)
   const versions = Array.from(tags.keys())
     .map(tag => Semver.valid(tag))
+    .filter(v => v !== '9.9.999') // WTF?
     .filter(Boolean)
 
-  console.log(`Found the following available versions: ${versions}`)
+  console.log(`Found the following available versions: ${versions.join(', ')}`)
 
   const version = getLatestStable(getVersionsInRange(config.version, versions))
 
@@ -38,8 +39,8 @@ module.exports = async function install (options) {
     throw new Error(`No version satisfying '${config.version}' available`)
   }
 
-  const archName = config.arch[0].toUpperCase() + config.arch.slice(1)
-  const fileName = `filecoin-${version}-${archName}.tar.gz`
+  const platformName = config.platform[0].toUpperCase() + config.platform.slice(1)
+  const fileName = `filecoin-${version}-${platformName}.tar.gz`
   const url = `${config.repoUrl}/releases/download/${version}/${fileName}`
 
   console.log(`Downloading ${url}`)
