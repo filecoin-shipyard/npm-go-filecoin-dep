@@ -14,6 +14,8 @@ const { pipeline } = require('stream')
 const Platforms = ['darwin', 'linux']
 const UnstablePattern = /[a-z+-]/i
 
+const REPO_URL = 'https://github.com/filecoin-project/go-filecoin'
+
 module.exports = async function install (options) {
   const config = getConfig(options || {})
 
@@ -46,16 +48,13 @@ module.exports = async function install (options) {
 }
 
 function getConfig ({ version, platform, arch, installPath }) {
-  const conf = pkgConf.sync('go-filecoin', {
-    cwd: Path.join(process.cwd(), '..'),
-    defaults: { repoUrl: 'https://github.com/filecoin-project/go-filecoin' }
-  })
+  const conf = pkgConf.sync('go-filecoin', { cwd: Path.join(process.cwd(), '..') })
 
   return {
     version: process.env.GO_FILECOIN_DEP_VERSION || version || conf.version || '*',
     platform: process.env.TARGET_OS || platform || conf.platform || goenv.GOOS,
     arch: process.env.TARGET_ARCH || arch || conf.arch || goenv.GOARCH,
-    repoUrl: process.env.GO_FILECOIN_DEP_REPO_URL || conf.repoUrl,
+    repoUrl: process.env.GO_FILECOIN_DEP_REPO_URL || conf.repoUrl || REPO_URL,
     installPath: installPath ? Path.resolve(installPath) : process.cwd()
   }
 }
