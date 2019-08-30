@@ -17,7 +17,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/alanshaw/npm-go-filecoin-dep.git"
+    "url": "git+https://github.com/filecoin-shipyard/npm-go-filecoin-dep.git"
   },
   "dependencies": {
     "go-platform": "^1.0.0",
@@ -37,9 +37,9 @@
   "author": "Alan Shaw",
   "license": "(Apache-2.0 OR MIT)",
   "bugs": {
-    "url": "https://github.com/alanshaw/npm-go-filecoin-dep/issues"
+    "url": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep/issues"
   },
-  "homepage": "https://github.com/alanshaw/npm-go-filecoin-dep",
+  "homepage": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep",
   "devDependencies": {
     "aegir": "^18.2.0"
   },

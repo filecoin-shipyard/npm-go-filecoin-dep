@@ -30,10 +30,10 @@ Note: The version field accepts semver ranges.
 
 ## Contribute
 
-Feel free to dive in! [Open an issue](https://github.com/alanshaw/npm-go-filecoin-dep/issues/new) or submit PRs.
+Feel free to dive in! [Open an issue](https://github.com/filecoin-shipyard/npm-go-filecoin-dep/issues/new) or submit PRs.
 
 ## License
 
 The Filecoin Project is dual-licensed under Apache 2.0 and MIT terms:
-- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/alanshaw/npm-go-filecoin-dep/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
-- MIT license ([LICENSE-MIT](https://github.com/alanshaw/npm-go-filecoin-dep/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)
+- Apache License, Version 2.0, ([LICENSE-APACHE](https://github.com/filecoin-shipyard/npm-go-filecoin-dep/blob/master/LICENSE-APACHE) or http://www.apache.org/licenses/LICENSE-2.0)
+- MIT license ([LICENSE-MIT](https://github.com/filecoin-shipyard/npm-go-filecoin-dep/blob/master/LICENSE-MIT) or http://opensource.org/licenses/MIT)
