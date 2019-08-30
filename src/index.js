@@ -21,7 +21,7 @@ module.exports = async function install (options) {
     throw new Error(`Platform '${config.platform}' unavailable`)
   }
 
-  console.log(`Checking '${config.version}' exists...`)
+  console.log(`Checking available versions for ${config.repoUrl}`)
 
   const tags = Object.keys(await remoteGitTags(config.repoUrl))
     .filter(tag => Semver.valid(tag))
