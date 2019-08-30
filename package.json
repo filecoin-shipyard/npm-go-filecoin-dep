@@ -1,0 +1,43 @@
+{
+  "name": "go-filecoin-dep",
+  "version": "0.0.0",
+  "description": "Install the latest go-filecoin binary",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=6.0.0",
+    "npm": ">=3.0.0"
+  },
+  "scripts": {
+    "install": "node src/bin.js",
+    "test": "aegir test --type node",
+    "lint": "aegir lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/filecoin-shipyard/npm-go-filecoin-dep.git"
+  },
+  "dependencies": {
+    "go-platform": "^1.0.0",
+    "gunzip-maybe": "^1.4.1",
+    "node-fetch": "^2.3.0",
+    "pkg-conf": "^3.1.0",
+    "remote-git-tags": "^3.0.0",
+    "semver": "^6.3.0",
+    "tar-fs": "^2.0.0"
+  },
+  "keywords": [
+    "filecoin",
+    "install",
+    "binary",
+    "standalone"
+  ],
+  "author": "Alan Shaw",
+  "license": "(Apache-2.0 OR MIT)",
+  "bugs": {
+    "url": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep/issues"
+  },
+  "homepage": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep",
+  "devDependencies": {
+    "aegir": "^18.2.0"
+  }
+}
