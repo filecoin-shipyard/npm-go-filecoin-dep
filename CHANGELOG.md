@@ -1,3 +1,8 @@
+<a name="1.0.0"></a>
+# [1.0.0](https://github.com/filecoin-shipyard/npm-go-filecoin-dep/compare/v0.0.9...v1.0.0) (2019-08-31)
+
+
+
 <a name="0.0.9"></a>
 ## [0.0.9](https://github.com/filecoin-shipyard/npm-go-filecoin-dep/compare/v0.0.8...v0.0.9) (2019-08-30)
 
