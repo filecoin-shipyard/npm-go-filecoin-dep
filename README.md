@@ -1,5 +1,9 @@
 # go-filecoin-dep
 
+[![CircleCI branch](https://img.shields.io/circleci/project/github/filecoin-shipyard/npm-go-filecoin-dep/master.svg)](https://circleci.com/gh/filecoin-shipyard/npm-go-filecoin-dep)
+[![dependencies Status](https://david-dm.org/filecoin-shipyard/npm-go-filecoin-dep/status.svg)](https://david-dm.org/filecoin-shipyard/npm-go-filecoin-dep)
+[![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
+
 > Download [go-filecoin](https://github.com/filecoin-project/go-filecoin/) to your node_modules.
 
 Note: requires Git to be installed.
