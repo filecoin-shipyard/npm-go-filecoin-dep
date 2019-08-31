@@ -10,6 +10,7 @@
   "scripts": {
     "install": "node src/bin.js",
     "test": "aegir test -t node",
+    "coverage": "nyc --reporter=text --reporter=lcov npm run test",
     "lint": "aegir lint",
     "release": "aegir release --no-docs --no-build --no-test",
     "release:minor": "aegir release --type minor --no-docs --no-build --no-test",
@@ -41,7 +42,9 @@
   },
   "homepage": "https://github.com/filecoin-shipyard/npm-go-filecoin-dep",
   "devDependencies": {
-    "aegir": "^18.2.0"
+    "aegir": "^18.2.0",
+    "execa": "^2.0.4",
+    "fs-extra": "^8.1.0"
   },
   "contributors": [
     "Alan Shaw <alan.shaw@protocol.ai>"

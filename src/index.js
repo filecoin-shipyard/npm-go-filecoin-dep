@@ -58,7 +58,7 @@ function getConfig ({ version, platform, arch, installPath }) {
     platform: process.env.TARGET_OS || platform || conf.platform || goenv.GOOS,
     arch: process.env.TARGET_ARCH || arch || conf.arch || goenv.GOARCH,
     repoUrl: process.env.GO_FILECOIN_DEP_REPO_URL || conf.repoUrl || REPO_URL,
-    installPath: installPath ? Path.resolve(installPath) : process.cwd()
+    installPath: Path.resolve(process.env.GO_FILECOIN_DEP_INSTALL_PATH || installPath || conf.installPath || process.cwd())
   }
 }
 
