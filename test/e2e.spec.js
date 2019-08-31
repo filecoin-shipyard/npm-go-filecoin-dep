@@ -52,7 +52,8 @@ describe('e2e', function () {
   it('should install filecoin', async () => {
     await writePkgJson()
     Assert.ok(!(await Fs.pathExists(filBinPath)))
-    await install()
+    const { stdout } = await install()
+    Assert.ok(stdout.includes('Installed go-filecoin'))
     Assert.ok(await Fs.pathExists(filBinPath))
   })
 
@@ -60,7 +61,7 @@ describe('e2e', function () {
     await writePkgJson({ version: '^0.2.1' })
     Assert.ok(!(await Fs.pathExists(filBinPath)))
     const { stdout } = await install()
-    Assert.ok(stdout.includes('Downloading https://github.com/filecoin-project/go-filecoin/releases/download/0.2.4'))
+    Assert.ok(stdout.includes('Installed go-filecoin 0.2.4'))
     Assert.ok(await Fs.pathExists(filBinPath))
   })
 
@@ -68,7 +69,7 @@ describe('e2e', function () {
     await writePkgJson({ version: '0.3.2' })
     Assert.ok(!(await Fs.pathExists(filBinPath)))
     const { stdout } = await install()
-    Assert.ok(stdout.includes('Downloading https://github.com/filecoin-project/go-filecoin/releases/download/0.3.2'))
+    Assert.ok(stdout.includes('Installed go-filecoin 0.3.2'))
     Assert.ok(await Fs.pathExists(filBinPath))
   })
 })

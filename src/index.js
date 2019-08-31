@@ -10,18 +10,10 @@ const remoteGitTags = require('remote-git-tags')
 const Semver = require('semver')
 const { pipeline } = require('stream')
 
-// Only these platforms are currently available
-const Platforms = ['darwin', 'linux']
-const UnstablePattern = /[a-z+-]/i
-
 const REPO_URL = 'https://github.com/filecoin-project/go-filecoin'
 
 module.exports = async function install (options) {
   const config = getConfig(options || {})
-
-  if (!Platforms.includes(config.platform)) {
-    throw new Error(`Platform '${config.platform}' unavailable`)
-  }
 
   console.log(`Checking for available versions: ${config.repoUrl}`)
 
@@ -44,8 +36,8 @@ module.exports = async function install (options) {
   const url = `${config.repoUrl}/releases/download/${version}/${fileName}`
 
   console.log(`Downloading ${url}`)
-
   await download({ installPath: config.installPath, url })
+  console.log(`Installed go-filecoin ${version} to ${config.installPath}`)
 
   return { ...config, version, fileName }
 }
@@ -63,6 +55,7 @@ function getConfig ({ version, platform, arch, installPath }) {
 }
 
 function getLatestStable (versions) {
+  const UnstablePattern = /[a-z+-]/i
   const stables = versions.filter(v => !UnstablePattern.test(v || ''))
   return stables.length
     ? stables.reduce((latest, v) => Semver.gt(v, latest) ? v : latest, '0.0.0')

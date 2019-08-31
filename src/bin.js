@@ -3,15 +3,11 @@
 'use strict'
 
 const install = require('./')
+const argv = process.argv
 
-install({
-  version: process.argv[2],
-  platform: process.argv[3],
-  arch: process.argv[4]
-}).then(({ version, platform, arch, fileName, installPath }) => {
-  console.log(`Installed go-filecoin to ${installPath}`)
-  process.exit(0)
-}, err => {
-  console.error(err)
-  process.exit(1)
-})
+install({ version: argv[2], platform: argv[3], arch: argv[4] })
+  .then(() => process.exit(0))
+  .catch(err => {
+    console.error(err)
+    process.exit(1)
+  })

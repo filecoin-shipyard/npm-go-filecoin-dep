@@ -28,16 +28,6 @@ describe('functional', function () {
     Assert.ok(await Fs.pathExists(filBinPath))
   })
 
-  it('should throw for unsupported platform', async () => {
-    try {
-      await install({ platform: 'windows', installPath: projectPath })
-    } catch (err) {
-      Assert.strict.equal(err.message, 'Platform \'windows\' unavailable')
-      return
-    }
-    throw new Error('did not throw')
-  })
-
   it('should throw for missing version', async () => {
     try {
       await install({ version: '0.3.3', installPath: projectPath })
